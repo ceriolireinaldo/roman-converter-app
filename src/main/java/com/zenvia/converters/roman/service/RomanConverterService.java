@@ -10,7 +10,7 @@ import com.zenvia.converters.roman.domain.RomanDomain;
  *
  */
 public class RomanConverterService {
-	static String result;
+	private static String result;
 
 	/**
 	 * translate the received arabic number into it's corresponding roman value
