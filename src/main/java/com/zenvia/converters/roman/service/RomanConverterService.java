@@ -4,9 +4,19 @@ import java.util.List;
 
 import com.zenvia.converters.roman.domain.RomanDomain;
 
+/**
+ * Utility class for arabic numeric into roman system translation
+ * @author rcerioli
+ *
+ */
 public class RomanConverterService {
 	static String result;
 
+	/**
+	 * translate the received arabic number into it's corresponding roman value
+	 * @param number the arabic integer value
+	 * @return the roman value as String 
+	 */
 	public static String translate(int number) {
 		result = "";
 		int initialValue = number;
