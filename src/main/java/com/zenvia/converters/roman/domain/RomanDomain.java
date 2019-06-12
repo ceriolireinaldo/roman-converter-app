@@ -3,6 +3,11 @@ package com.zenvia.converters.roman.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Roman system domain class
+ * @author rcerioli
+ *
+ */
 public class RomanDomain {
 	
 	public RomanDomain(int arabicValue, String romanValue) {
@@ -30,6 +35,11 @@ public class RomanDomain {
 		this.romanValue = romanValue;
 	}
 	
+	/**
+	 * Creates and return a List instance of Sting objects
+	 * comprising the letters which compose the roman numeric system
+	 * @return List: a list of of Sting object letters for the roman numeric system
+	 */
 	public static List<RomanDomain> initDomain() {
 		ArrayList<RomanDomain> romanDomain = new ArrayList<RomanDomain>();
 		romanDomain.add(new RomanDomain(1000, "M"));
