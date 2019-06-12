@@ -5,11 +5,12 @@ import java.util.List;
 
 /**
  * Roman system domain class
+ * 
  * @author rcerioli
  *
  */
 public class RomanDomain {
-	
+
 	public RomanDomain(int arabicValue, String romanValue) {
 		super();
 		this.arabicValue = arabicValue;
@@ -34,10 +35,11 @@ public class RomanDomain {
 	public void setRomanValue(String romanValue) {
 		this.romanValue = romanValue;
 	}
-	
+
 	/**
-	 * Creates and return a List instance of Sting objects
-	 * comprising the letters which compose the roman numeric system
+	 * Creates and return a List instance of Sting objects comprising the letters
+	 * which compose the roman numeric system
+	 * 
 	 * @return List: a list of of Sting object letters for the roman numeric system
 	 */
 	public static List<RomanDomain> initDomain() {
