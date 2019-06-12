@@ -6,6 +6,7 @@ import com.zenvia.converters.roman.domain.RomanDomain;
 
 /**
  * Utility class for arabic numeric into roman system translation
+ * 
  * @author rcerioli
  *
  */
@@ -14,8 +15,9 @@ public class RomanConverterService {
 
 	/**
 	 * translate the received arabic number into it's corresponding roman value
+	 * 
 	 * @param number the arabic integer value
-	 * @return the roman value as String 
+	 * @return the roman value as String
 	 */
 	public static String translate(int number) {
 		result = "";
@@ -24,16 +26,14 @@ public class RomanConverterService {
 		for (RomanDomain roman : romanValues) {
 			number = reduce(number, roman);
 		}
-		System.out.println("O valor romano para o arábico [" + initialValue +  "] é: " + result);
+		System.out.println("O valor romano para o arábico [" + initialValue + "] é: " + result);
 		return result;
 	}
 
 	private static int reduce(int number, RomanDomain roman) {
-		int arabicValue = roman.getArabicValue();
-		String romanValue = roman.getRomanValue();
-		while (number >= arabicValue ) {
-			result += romanValue;
-			number -= arabicValue;
+		while (number >= roman.getArabicValue()) {
+			result += roman.getRomanValue();
+			number -= roman.getArabicValue();
 		}
 		return number;
 	}
